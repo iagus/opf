@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real HTML Title, ignored in favour of og:title</title>
+  <meta name="description" content="Plain description, ignored in favour of og:description">
+  <meta property="og:title" content="Example OG title">
+  <meta property="og:description" content="An example description">
+  <meta property="og:image" content="https://example.com/og-1.png">
+  <meta property="og:image:secure_url" content="https://example.com/og-2.png">
+  <meta property="og:image" content="https://example.com/og-1.png">
+  <link rel="shortcut icon" href="/legacy.ico">
+  <link rel="icon" href="https://example.com/icon.png">
+</head>
+<body>Full OpenGraph page: og:image duplicated on purpose, deduplication expected.</body>
+</html>

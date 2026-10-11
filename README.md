@@ -1,8 +1,6 @@
 # Opf
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/opf`. To experiment with that code, run `bin/console` for an interactive prompt.
+Opf fetches OpenGraph metadata — title, description and images — plus the site favicon, from user-provided URLs. To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
@@ -22,7 +20,25 @@ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "opf"
+
+page = Opf.fetch("https://ogp.me")
+
+page.title       # => og:title (falls back to the HTML <title>)
+page.description # => og:description (falls back to <meta name="description">)
+page.images      # => every declared og:image URL
+page.image       # => the primary image (first og:image)
+page.favicon     # => the site's favicon URL
+page.url         # => final URL after following redirects
+```
+
+`Opf.fetch` raises typed errors on failure:
+
+- `Opf::InvalidURLError` — malformed URLs or non http/https schemes
+- `Opf::FetchError` — network failures, redirect loops, error statuses or non HTML responses
+
+Pages lacking OpenGraph tags simply return `nil`/`[]` for the missing fields.
 
 ## Development
 

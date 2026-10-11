@@ -6,10 +6,11 @@ Gem::Specification.new do |spec|
   spec.name = "opf"
   spec.version = Opf::VERSION
   spec.authors = ["iagus"]
-  spec.email = ["santiago.fgonz@gmail.com"]
+  spec.email = ["iagus.widget524@passinbox.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
+  spec.summary = "Fetch OpenGraph metadata (title, description, images) and favicons from URLs."
+  spec.description = "Opf fetches OpenGraph metadata (title, description, images) and the favicon URL " \
+                     "from user-provided URLs, raising typed errors for invalid URLs or failed fetches."
   spec.homepage = "TODO: Put your gem's website or public repo URL here."
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
@@ -37,8 +38,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  # Dependencies of the gem
+  spec.add_dependency "nokogiri", "~> 1.19"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://guides.rubygems.org/make-your-own-gem/
