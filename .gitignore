@@ -1,0 +1,15 @@
+# Nix
+.nix-gems/
+.direnv/
+
+# Bundler / RubyGems
+/.bundle/
+/pkg/
+/tmp/
+
+# Docs and coverage
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/spec/reports/
