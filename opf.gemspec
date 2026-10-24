@@ -11,19 +11,19 @@ Gem::Specification.new do |spec|
   spec.summary = "Fetch OpenGraph metadata (title, description, images) and favicons from URLs."
   spec.description = "Opf fetches OpenGraph metadata (title, description, images) and the favicon URL " \
                      "from user-provided URLs, raising typed errors for invalid URLs or failed fetches."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage = "https://github.com/iagus/opf"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://rubygems.org"
+  spec.metadata["changelog_uri"] = "https://rubygems.org"
 
   # Uncomment the line below to require MFA for gem pushes.
   # This helps protect your gem from supply chain attacks by ensuring
   # no one can publish a new version without multi-factor authentication.
   # See: https://guides.rubygems.org/mfa-requirement-opt-in/
-  # spec.metadata["rubygems_mfa_required"] = "true"
+  spec.metadata["rubygems_mfa_required"] = "true"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
