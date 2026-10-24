@@ -16,8 +16,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.2.0"
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://rubygems.org"
-  spec.metadata["changelog_uri"] = "https://rubygems.org"
+  spec.metadata["source_code_uri"] = "https://github.com/iagus/opf"
+  spec.metadata["changelog_uri"] = "https://github.com/iagus/opf/blob/main/CHANGELOG.md"
 
   # Uncomment the line below to require MFA for gem pushes.
   # This helps protect your gem from supply chain attacks by ensuring
